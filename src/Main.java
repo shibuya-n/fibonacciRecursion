@@ -10,7 +10,7 @@ public class Main {
 
 
             Scanner inputObject = new Scanner(System.in);
-            System.out.println("What number would you like to fibb?");
+            System.out.println("What number would you like to fibb and factorial?");
             String input = inputObject.nextLine();
 
             if (input.equals("done")){
@@ -20,6 +20,9 @@ public class Main {
 
                 int toReturn = fibonacci(Integer.parseInt(input));
                 System.out.println(toReturn);
+
+                int factorial = factorial(Integer.parseInt(input));
+                System.out.println(factorial);
             }
         }
 
@@ -48,5 +51,14 @@ public class Main {
 //        return fibonacci(input -1) + fibonacci(input -2);
 
 
+    }
+
+    public static int factorial(int input){
+        if (input > 0){
+            return input * factorial(input-1);
+        }
+        else {
+            return 1;
+        }
     }
 }
